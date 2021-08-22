@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Flappy-Bird-Pixel</title>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      UnityLoader.instantiate("unityContainer", "Build/flappybirdpixel.json");
+      window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '263684025344534',
+        xfbml      : true,
+        version    : 'v11.0'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+  </head>
+  <body>
+    <div id="unityContainer" style="width: 414px; height: 736px; margin: auto"></div>
+  </body>
+</html>
